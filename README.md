@@ -1,5 +1,9 @@
 # create-tag
 
+[![Build Status](https://travis-ci.org/bencode/create-tag.svg?branch=master)](https://travis-ci.org/bencode/create-tag)
+[![Coverage Status](https://coveralls.io/repos/bencode/create-tag/badge.svg)](https://coveralls.io/r/bencode/create-tag)
+
+
 utility for creating tag string
 
 
