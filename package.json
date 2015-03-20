@@ -1,8 +1,8 @@
 {
   "name": "create-tag",
   "version": "1.0.0",
-  "description": "utility for creating html tag",
-  "main": "index.js",
+  "description": "utility for creating tag",
+  "main": "lib/index.js",
   "scripts": {
     "jshint": "node ./node_modules/jshint/bin/jshint lib test",
     "test": "node ./node_modules/mocha/bin/mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
