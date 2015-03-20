@@ -1,6 +1,6 @@
 {
   "name": "create-tag",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "utility for creating tag",
   "main": "lib/index.js",
   "scripts": {
