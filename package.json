@@ -1,0 +1,28 @@
+{
+  "name": "create-tag",
+  "version": "1.0.0",
+  "description": "utility for creating html tag",
+  "main": "index.js",
+  "scripts": {
+    "jshint": "node ./node_modules/jshint/bin/jshint lib test",
+    "test": "node ./node_modules/mocha/bin/mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
+    "test-cov": "node --harmony ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require 'should' --recursive --bail --check-leaks test/ -R spec",
+    "all": "npm run jshint && npm run test && npm run test-cov"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.7",
+    "jshint": "^2.6.3",
+    "mocha": "^2.2.1",
+    "should": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bencode/create-tag.git"
+  },
+  "author": "bencode@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencode/create-tag/issues"
+  },
+  "homepage": "https://github.com/bencode/create-tag"
+}
