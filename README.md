@@ -1,6 +1,6 @@
 # create-tag
 
-utility for creating html tag
+utility for creating tag string
 
 
 ```
@@ -26,7 +26,6 @@ createTag('span', null, 'hello');
 
 createTag('div', { class: null, style: 'font-size: 10px' }, 'Hello');
 // <div style="font-size: 10px">Hello</div>
-
 
 createTag('span', { 'data-value': '<>' });
 // <span data-value="&lt;&gt;" />
