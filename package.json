@@ -7,12 +7,14 @@
     "jshint": "node ./node_modules/jshint/bin/jshint lib test",
     "test": "node ./node_modules/mocha/bin/mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
     "test-cov": "node --harmony ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require 'should' --recursive --bail --check-leaks test/ -R spec",
-    "all": "npm run jshint && npm run test && npm run test-cov"
+    "coveralls": "node ./node_modules/coveralls/bin/coveralls.js",
+    "all": "npm run jshint && npm run test && npm run test-cov && npm run coveralls"
   },
   "devDependencies": {
     "istanbul": "^0.3.7",
     "jshint": "^2.6.3",
     "mocha": "^2.2.1",
+    "mocha-lcov-reporter": "0.0.2",
     "should": "^5.2.0"
   },
   "repository": {
