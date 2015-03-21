@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/bencode/create-tag/issues"
   },
-  "homepage": "https://github.com/bencode/create-tag"
+  "homepage": "https://github.com/bencode/create-tag",
+  "dependencies": {
+    "html-escape": "^1.0.1"
+  }
 }
