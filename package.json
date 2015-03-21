@@ -4,18 +4,17 @@
   "description": "utility for creating tag",
   "main": "lib/index.js",
   "scripts": {
-    "jshint": "node ./node_modules/jshint/bin/jshint lib test",
-    "test": "node ./node_modules/mocha/bin/mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
-    "test-cov": "node --harmony ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --require 'should' --recursive --bail --check-leaks test/ -R spec",
-    "coveralls": "node ./node_modules/coveralls/bin/coveralls.js",
-    "all": "npm run jshint && npm run test && npm run test-cov && npm run coveralls"
+    "jshint": "node ./node_modules/.bin/jshint lib test",
+    "test": "node ./node_modules/.bin/_mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
+    "test-cov": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "test-travis": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "all": "npm run jshint && npm run test && npm run test-cov"
   },
   "devDependencies": {
-    "istanbul": "^0.3.7",
     "jshint": "^2.6.3",
     "mocha": "^2.2.1",
-    "mocha-lcov-reporter": "0.0.2",
-    "should": "^5.2.0"
+    "should": "^5.2.0",
+    "istanbul": "^0.3.7"
   },
   "repository": {
     "type": "git",
