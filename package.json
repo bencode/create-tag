@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/bencode/create-tag",
   "dependencies": {
-    "html-escape": "^1.0.1"
+    "escape-html": "^1.0.1"
   }
 }
