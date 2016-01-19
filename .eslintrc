@@ -1,0 +1,7 @@
+{
+  extends: 'bce',
+
+  rules: {
+    no-var: 0
+  }
+}

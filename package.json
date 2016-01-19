@@ -4,17 +4,22 @@
   "description": "utility for creating tag",
   "main": "lib/index.js",
   "scripts": {
-    "jshint": "node ./node_modules/.bin/jshint lib test",
-    "test": "node ./node_modules/.bin/_mocha --harmony --require 'should' --reporter spec --recursive --bail --check-leaks test/",
-    "test-cov": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require 'should' --recursive --bail --check-leaks test/",
-    "test-travis": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require 'should' --recursive --bail --check-leaks test/",
-    "all": "npm run jshint && npm run test && npm run test-cov"
+    "lint": "node_modules/.bin/eslint lib test",
+    "test": "node_modules/.bin/mocha --require 'should' --reporter spec --recursive --bail --check-leaks test/",
+    "cov": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "travis": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -u exports --require 'should' --recursive --bail --check-leaks test/",
+    "ci": "npm run lint && npm run test && npm run cov"
+  },
+  "dependencies": {
+    "escape-html": "~1.0.3"
   },
   "devDependencies": {
+    "eslint": "~1.10.3",
+    "eslint-config-bce": "~0.5.0",
+    "istanbul": "^0.3.7",
     "jshint": "^2.6.3",
     "mocha": "^2.2.1",
-    "should": "^5.2.0",
-    "istanbul": "^0.3.7"
+    "should": "^5.2.0"
   },
   "repository": {
     "type": "git",
@@ -25,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/bencode/create-tag/issues"
   },
-  "homepage": "https://github.com/bencode/create-tag",
-  "dependencies": {
-    "escape-html": "^1.0.1"
-  }
+  "homepage": "https://github.com/bencode/create-tag"
 }
